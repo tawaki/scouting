@@ -55,7 +55,7 @@ details.animal{background:var(--card);border:1px solid var(--line);border-left:5
   border-radius:12px;margin:10px 0;overflow:hidden}
 details.animal>summary{list-style:none;cursor:pointer;display:flex;align-items:center;gap:12px;padding:12px 14px}
 details.animal>summary::-webkit-details-marker{display:none}
-.emo{font-size:2rem;line-height:1;flex:none;width:2.4rem;text-align:center}
+.emo{flex:none;width:3.2rem;height:3.2rem;display:block;object-fit:contain}
 .nm{flex:1;min-width:0}
 .nm b{font-size:1.15rem}
 .nm .tag{display:block;color:var(--muted);font-size:.88rem}
@@ -70,7 +70,7 @@ details[open] .arrow{transform:rotate(90deg)}
 .q p{margin:0}
 footer{color:var(--muted);font-size:.85rem;padding:28px 0 40px;border-top:1px solid var(--line);margin-top:30px}
 footer a{color:var(--accent)}
-@media (max-width:480px){ body{font-size:16px} h1{font-size:1.35rem} .logo{height:60px} .brand{gap:10px} }
+@media (max-width:480px){ body{font-size:16px} h1{font-size:1.35rem} .logo{height:60px} .brand{gap:10px} .emo{width:2.8rem;height:2.8rem} }
 .kicker{display:block;font-size:.8rem;letter-spacing:.04em;color:var(--muted);text-decoration:none;margin-bottom:2px}
 .kicker:hover{text-decoration:underline}
 </style>
@@ -103,7 +103,7 @@ for (const a of AREAS) {
   chips.insertAdjacentHTML("beforeend", `<a href="#${a.id}" style="border-color:var(${a.c})">${a.name}</a>`);
   const cards = a.animals.map(x => `
     <details class="animal">
-      <summary><span class="emo" aria-hidden="true">${x.e}</span>
+      <summary><img class="emo" src="art/${x.id}.svg" alt="" width="64" height="64" loading="lazy">
         <span class="nm"><b>${esc(x.n)}</b><span class="tag">${esc(x.t)}</span></span>
         <span class="arrow" aria-hidden="true">▶</span></summary>
       <div class="body">
