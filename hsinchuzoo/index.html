@@ -71,12 +71,14 @@ details[open] .arrow{transform:rotate(90deg)}
 footer{color:var(--muted);font-size:.85rem;padding:28px 0 40px;border-top:1px solid var(--line);margin-top:30px}
 footer a{color:var(--accent)}
 @media (max-width:480px){ body{font-size:16px} h1{font-size:1.35rem} .logo{height:60px} .brand{gap:10px} }
+.kicker{display:block;font-size:.8rem;letter-spacing:.04em;color:var(--muted);text-decoration:none;margin-bottom:2px}
+.kicker:hover{text-decoration:underline}
 </style>
 </head>
 <body>
 <header class="wrap">
   <div class="top">
-    <div class="brand"><a href="../" title="回童軍教學資源首頁"><img class="logo" src="logo.png" alt="童軍教學資源首頁" width="228" height="300"></a><h1>新竹動物園 動物小百科</h1></div>
+    <div class="brand"><a href="../" title="回童軍教學資源首頁"><img class="logo" src="logo.png" alt="童軍教學資源首頁" width="228" height="300"></a><div><a class="kicker" href="../">Scouting 童軍教學資源</a><h1>新竹動物園 動物小百科</h1></div></div>
     <button id="theme" type="button" aria-label="切換深色或淺色">🌓 深淺色</button>
   </div>
   <p class="sub">點動物的名字，看看牠的自我介紹。</p>
