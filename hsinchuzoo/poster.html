@@ -1,0 +1,205 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>動物教具海報</title>
+<link rel="icon" href="logo.png">
+<meta name="description" content="給大人手寫的半開動物教具海報：完成範例、版面尺寸與講解小抄。">
+<style>
+:root{
+  --bg:#f6f4ec; --card:#ffffff; --ink:#24302a; --muted:#5f6b63; --line:#dcd8c8; --accent:#2f7d4f; --chip:#e8efe6;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){ --bg:#151a17; --card:#1f2622; --ink:#e7ece8; --muted:#a8b3ac; --line:#34403a; --accent:#6cc191; --chip:#26302b; }
+}
+:root[data-theme="dark"]{ --bg:#151a17; --card:#1f2622; --ink:#e7ece8; --muted:#a8b3ac; --line:#34403a; --accent:#6cc191; --chip:#26302b; }
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);line-height:1.7;font-size:17px;
+  font-family:-apple-system,BlinkMacSystemFont,"PingFang TC","Noto Sans TC","Microsoft JhengHei",sans-serif}
+.wrap{max-width:860px;margin:0 auto;padding:0 16px}
+header{padding:22px 0 6px}
+.brand{display:flex;align-items:center;gap:14px}
+.logo{height:76px;width:auto;flex:none}
+h1{font-size:1.5rem;margin:0;line-height:1.3}
+.sub{color:var(--muted);margin:4px 0 0;font-size:.95rem}
+a{color:var(--accent)}
+.bar{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin:14px 0}
+.seg{display:inline-flex;border:1px solid var(--line);border-radius:999px;overflow:hidden}
+.seg button{border:0;background:var(--card);color:var(--ink);padding:6px 14px;font:inherit;font-size:.92rem;cursor:pointer}
+.seg button[aria-pressed="true"]{background:var(--accent);color:#fff}
+.print{border:1px solid var(--accent);background:var(--card);color:var(--accent);border-radius:999px;padding:6px 14px;font:inherit;font-size:.92rem;cursor:pointer}
+.hint{color:var(--muted);font-size:.9rem;margin:-4px 0 12px}
+section.card{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:14px 18px;margin:18px 0}
+section.card h2{font-size:1.15rem;margin:0 0 6px}
+section.card ol,section.card ul{margin:0;padding-left:1.3em}
+section.card li{margin:3px 0}
+.notes dt{font-weight:700;margin-top:8px}
+.notes dd{margin:0 0 0 1.4em}
+
+/* ---- poster: 半開 54.5 × 78.7 cm; every size below is in real centimetres ---- */
+.sheet{container-type:inline-size;width:100%;max-width:620px;margin:0 auto;box-shadow:0 2px 14px rgba(0,0,0,.18)}
+.poster{
+  --cm:calc(100cqw / 54.5);
+  --red:#d2502a; --blue:#2c6fb0; --green:#2f8a4f; --brown:#8a5a2b; --pen:#1d1d1d;
+  position:relative;aspect-ratio:54.5/78.7;background:#fffdf7;color:var(--pen);overflow:hidden;
+  font-family:"Yuanti TC","jf-openhuninn","Hiragino Maru Gothic ProN","Arial Rounded MT Bold","Microsoft JhengHei","PingFang TC",sans-serif;font-weight:900;
+}
+.el{position:absolute;left:calc(var(--x)*var(--cm));top:calc(var(--y)*var(--cm));width:calc(var(--w)*var(--cm));height:calc(var(--h)*var(--cm))}
+.title{text-align:center}
+.title .name{font-size:calc(9.3*var(--cm));line-height:1;font-weight:900;letter-spacing:calc(.3*var(--cm));color:#fff;-webkit-text-stroke:calc(1*var(--cm)) var(--brown);paint-order:stroke fill;text-shadow:calc(.5*var(--cm)) calc(.5*var(--cm)) 0 #f2c14e}
+.title .tag{display:inline-block;font-size:calc(3.4*var(--cm));color:#fff;background:var(--red);border-radius:calc(2*var(--cm));padding:0 calc(1.6*var(--cm));margin-top:calc(.6*var(--cm));transform:rotate(-2deg)}
+.ul{position:absolute;left:calc(var(--x)*var(--cm));top:calc(var(--y)*var(--cm));width:calc(var(--w)*var(--cm));height:calc(.5*var(--cm));
+  background:var(--red);border-radius:calc(.3*var(--cm));transform:rotate(-.4deg)}
+.box{border:calc(.28*var(--cm)) solid var(--c,var(--pen));border-radius:calc(1.4*var(--cm));padding:calc(.6*var(--cm)) calc(1.2*var(--cm))}
+.box h3{margin:0;font-size:calc(2.6*var(--cm));line-height:1.15;color:#fff;background:var(--c,var(--pen));border-radius:calc(1*var(--cm));padding:calc(.15*var(--cm)) calc(.8*var(--cm));display:inline-flex;align-items:center;gap:calc(.5*var(--cm))}
+.box h3 .n{display:inline-grid;place-items:center;width:calc(3*var(--cm));height:calc(3*var(--cm));border-radius:50%;background:#fff;color:var(--c,var(--pen));font-size:calc(2.2*var(--cm));flex:none}
+.box p{margin:calc(.4*var(--cm)) 0 0;font-size:calc(3.2*var(--cm));line-height:1.1;white-space:nowrap;letter-spacing:calc(.1*var(--cm))}
+.box p b{color:var(--red)}
+.box p small{font-size:.8em}
+.draw{border-style:dashed;--c:#9a8f78;display:grid;place-items:center}
+.draw svg{width:92%;height:auto}
+.fact{text-align:center;font-size:calc(3*var(--cm));line-height:1.2}
+.fact b{color:var(--red);font-size:calc(3.6*var(--cm))}
+/* dimension overlay */
+.dim{display:none}
+.poster.dims .dim{display:block}
+.poster.dims .ink{visibility:hidden}
+.poster.dims .box,.poster.dims .title,.poster.dims .fact{outline:1px dashed #3a7bd5;outline-offset:-1px}
+.poster.dims .ul{background:#c9d8ee}
+.dim{position:absolute;inset:0;display:none;font-family:-apple-system,BlinkMacSystemFont,"PingFang TC","Noto Sans TC","Microsoft JhengHei",sans-serif;color:#1f5fbf;
+  font-size:calc(1.7*var(--cm));line-height:1.35;font-weight:400;padding:calc(.8*var(--cm));text-align:center;place-content:center}
+.poster.dims .dim{display:grid}
+.dim b{font-size:calc(2.2*var(--cm))}
+.grid5{position:absolute;inset:0;display:none;pointer-events:none;
+  background-image:linear-gradient(to right,rgba(58,123,213,.18) 1px,transparent 1px),linear-gradient(to bottom,rgba(58,123,213,.18) 1px,transparent 1px);
+  background-size:calc(5*var(--cm)) calc(5*var(--cm))}
+.poster.dims .grid5{display:block}
+.edge{position:absolute;display:none;color:#1f5fbf;font-family:sans-serif;font-weight:400;font-size:calc(1.4*var(--cm));white-space:nowrap}
+.poster.dims .edge{display:block}
+
+@media (max-width:480px){ body{font-size:16px} h1{font-size:1.3rem} .logo{height:60px} .brand{gap:10px} }
+@media print{
+  @page{size:A4 portrait;margin:8mm}
+  body{background:#fff}
+  header,.bar,.hint,footer{display:none!important}
+  .wrap{max-width:none;padding:0}
+  .sheet{max-width:none;width:calc((297mm - 16mm) * 54.5 / 78.7);box-shadow:none;break-after:page}
+  .poster{-webkit-print-color-adjust:exact;print-color-adjust:exact}
+  section.card{border:0;padding:0;break-inside:avoid}
+}
+footer{color:var(--muted);font-size:.85rem;padding:20px 0 40px}
+</style>
+</head>
+<body>
+<header class="wrap">
+  <div class="brand"><img class="logo" src="logo.png" alt="" width="214" height="281">
+    <div><h1>動物教具海報：北美浣熊</h1><p class="sub">給大人手寫的半開直式海報（54.5 × 78.7 公分）・<a href="./">回動物小百科</a></p></div>
+  </div>
+</header>
+<main class="wrap">
+  <div class="bar">
+    <div class="seg" role="group" aria-label="顯示">
+      <button type="button" data-mode="ex" aria-pressed="true">完成範例</button>
+      <button type="button" data-mode="dim" aria-pressed="false">版面尺寸</button>
+    </div>
+    <button type="button" class="print" onclick="print()">🖨️ 列印參考稿（A4）</button>
+  </div>
+  <p class="hint">給大人製作上課教具的參考格式與內容。POP 海報字要大、字要少：每格只寫 2 行、每行 5 個字以內，小朋友坐在教室後面也看得清楚；詳細內容由大人照下面的「講解小抄」口頭說明。</p>
+
+  <div class="sheet">
+    <article class="poster" id="poster">
+      <div class="grid5"></div>
+
+      <div class="el title" style="--x:2.5;--y:2.2;--w:49.5;--h:14.3">
+        <div class="ink"><div class="name">北美浣熊</div><div class="tag">飯前先洗手！</div></div>
+        <div class="dim"><span><b>標題區 49.5 × 14 公分</b><br>動物名字：字高 9 公分（4 字約 40 公分寬），空心字加陰影<br>副標題：字高 3.5 公分，放在色塊上</span></div>
+      </div>
+      
+      <div class="el box draw" style="--x:2.5;--y:17.5;--w:24;--h:25.5">
+        <svg class="ink" viewBox="0 0 220 200" role="img" aria-label="浣熊插圖">
+          <g stroke="#222" stroke-width="3" stroke-linejoin="round" stroke-linecap="round">
+            <path d="M150 150 q40 -5 50 -45" fill="none" stroke-width="22" stroke="#8c8c8c"/>
+            <path d="M178 140 l12 -10 M190 124 l11 -6 M197 106 l10 -2" stroke="#222" stroke-width="7"/>
+            <ellipse cx="110" cy="150" rx="55" ry="38" fill="#9a9a9a"/>
+            <path d="M45 62 l-6 -40 l34 22 z" fill="#8c8c8c"/>
+            <path d="M175 62 l6 -40 l-34 22 z" fill="#8c8c8c"/>
+            <path d="M52 52 l-3 -18 l15 10 z" fill="#f2f2f2" stroke-width="2"/>
+            <path d="M168 52 l3 -18 l-15 10 z" fill="#f2f2f2" stroke-width="2"/>
+            <path d="M30 80 q80 -70 160 0 q8 40 -40 58 q-40 14 -80 0 q-48 -18 -40 -58 z" fill="#a6a6a6"/>
+            <path d="M44 86 q20 -18 46 -2 q12 6 20 6 q8 0 20 -6 q26 -16 46 2 q-6 26 -34 22 q-16 -2 -32 -2 q-16 0 -32 2 q-28 4 -34 -22 z" fill="#2b2b2b"/>
+            <path d="M80 112 q30 34 60 0 q-6 22 -30 26 q-24 -4 -30 -26 z" fill="#f2f2f2" stroke-width="2"/>
+            <circle cx="78" cy="92" r="7" fill="#fff" stroke="none"/><circle cx="142" cy="92" r="7" fill="#fff" stroke="none"/>
+            <circle cx="79" cy="93" r="3.6" fill="#111" stroke="none"/><circle cx="141" cy="93" r="3.6" fill="#111" stroke="none"/>
+            <ellipse cx="110" cy="114" rx="9" ry="6" fill="#111"/>
+            <path d="M68 178 q-6 12 6 12 q10 0 8 -12" fill="#666"/>
+            <path d="M152 178 q6 12 -6 12 q-10 0 -8 -12" fill="#666"/>
+          </g>
+          <path d="M60 196 q50 -10 100 0 z" fill="#5aa9e6" opacity=".75"/>
+        </svg>
+        <div class="dim"><span><b>畫圖區 24 × 25.5 公分</b><br>浣熊畫大一點，<br>佔滿格子的八成</span></div>
+      </div>
+
+      <div class="el box" style="--x:28;--y:17.5;--w:24;--h:12.25;--c:var(--blue)">
+        <div class="ink"><h3><span class="n">1</span>我是誰</h3><p><b>黑眼圈</b><br>環紋尾巴</p></div>
+        <div class="dim"><span><b>24 × 12 公分</b><br>標題字高 2.6 公分<br>內文字高 3 公分<br>每行 5 字內</span></div>
+      </div>
+      <div class="el box" style="--x:28;--y:30.75;--w:24;--h:12.25;--c:var(--blue)">
+        <div class="ink"><h3><span class="n">2</span>我家在哪裡</h3><p><b>北美洲</b><br>森林・城市</p></div>
+        <div class="dim"><span><b>24 × 12 公分</b><br>可以加一張小地圖</span></div>
+      </div>
+
+      <div class="el box" style="--x:2.5;--y:44.5;--w:24;--h:13;--c:var(--green)">
+        <div class="ink"><h3><span class="n">3</span>生態功能</h3><p>散播<b>種子</b><br>控制數量</p></div>
+        <div class="dim"><span><b>24 × 13 公分</b><br>每行 5 字內，<br>字越少越好</span></div>
+      </div>
+      <div class="el box" style="--x:28;--y:44.5;--w:24;--h:13;--c:var(--brown)">
+        <div class="ink"><h3><span class="n">4</span>經濟功能</h3><p>毛皮<b>帽子</b><br>棄養<small>→</small>害農</p></div>
+        <div class="dim"><span><b>24 × 13 公分</b></span></div>
+      </div>
+      <div class="el box" style="--x:2.5;--y:58.5;--w:24;--h:13;--c:var(--red)">
+        <div class="ink"><h3><span class="n">5</span>獨特超能力</h3><p><b>泡水</b>摸一摸<br>靈巧前爪</p></div>
+        <div class="dim"><span><b>24 × 13 公分</b></span></div>
+      </div>
+      <div class="el box" style="--x:28;--y:58.5;--w:24;--h:13;--c:var(--green)">
+        <div class="ink"><h3><span class="n">6</span>特殊需求</h3><p><b>不是寵物</b><br>要爬・要玩水</p></div>
+        <div class="dim"><span><b>24 × 13 公分</b></span></div>
+      </div>
+
+      <div class="el fact" style="--x:2.5;--y:72.5;--w:49.5;--h:3.7">
+        <div class="ink">💡「<b>浣</b>」＝「洗」</div>
+        <div class="dim"><span><b>小知識 49.5 × 3.7 公分</b>・字高 3 公分</span></div>
+      </div>
+
+      <div class="edge" style="left:50%;top:calc(.4*var(--cm));transform:translateX(-50%)">寬 54.5 × 高 78.7 公分・四周留白約 2.5 公分</div>
+          </article>
+  </div>
+
+
+  <section class="card">
+    <h2>🎤 講解小抄（大人照著說）</h2>
+    <dl class="notes">
+      <dt>1. 我是誰</dt><dd>我有黑眼圈面罩，尾巴有一圈一圈的環紋。我是夜行性動物，黑眼圈不是熬夜！科學家猜，它可能可以減少反光，幫助我晚上看得更清楚。</dd>
+      <dt>2. 我家在哪裡</dt><dd>加拿大南部到中美洲的森林和溼地，連城市裡也住得下去。</dd>
+      <dt>3. 生態功能</dt><dd>我什麼都吃：水果、昆蟲、鳥蛋和小動物，幫忙散播種子，也控制小動物的數量。</dd>
+      <dt>4. 經濟功能</dt><dd>以前我的毛皮被拿來做帽子。在日本，很多人把我當寵物又棄養，我在野外繁殖成了外來入侵種，偷吃農作物。</dd>
+      <dt>5. 我的獨特超能力</dt><dd>先問：「浣熊吃東西前會做什麼？」我的前爪非常靈巧，沾濕後觸覺會變得更靈敏，所以我會先把食物放進水裡摸一摸、洗一洗再吃，這就是「浣」熊名字的由來。</dd>
+      <dt>6. 我的特殊需求</dt><dd>我不是寵物！我好奇心很強，會破壞家具，還愛把東西丟進水裡。我需要可以攀爬、玩水、找食物的地方。新竹動物園 2026 年剛把浣熊區擴大，加了攀爬架；我在動物園常吃香蕉、木瓜、煮過的地瓜、芒果和蔬菜葉子。</dd>
+      <dt>到動物園時可以問小朋友</dt><dd>「浣熊的黑眼圈在哪裡？」「牠的尾巴有幾圈？」「展區裡有沒有可以玩水的地方？」</dd>
+    </dl>
+  </section>
+</main>
+<footer class="wrap">資料參考新竹市立動物園官網「動物資訊」。</footer>
+<script>
+const poster = document.getElementById("poster");
+const setMode = m => {
+  document.querySelectorAll(".seg button").forEach(x => x.setAttribute("aria-pressed", x.dataset.mode === m));
+  poster.classList.toggle("dims", m === "dim");
+};
+document.querySelectorAll(".seg button").forEach(b => b.onclick = () => setMode(b.dataset.mode));
+if (new URLSearchParams(location.search).get("mode") === "dim") setMode("dim");
+const root = document.documentElement;
+try { const t = localStorage.getItem("hczoo-theme"); if (t) root.dataset.theme = t; } catch (e) {}
+</script>
+</body>
+</html>
