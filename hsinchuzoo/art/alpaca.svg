@@ -12,7 +12,7 @@
     <ellipse cx="64" cy="53" rx="21" ry="18" fill="#d9b48a"/>
     <ellipse cx="46" cy="60" rx="12" ry="10" fill="#f0dcc0"/>
     <path d="M38 58 l4 2 M38 64 q6 4 10 0" fill="none" stroke-width="2.5"/>
-    <path d="M56 34 q-6 -12 6 -14 q4 -12 16 -6 q12 -4 14 8 q10 6 2 14 q-8 6 -14 0 q-8 6 -14 0 q-8 4 -10 -2 z" fill="#f6ecd6"/>
+    <path d="M46 43 q-8 -10 2 -17 q2 -12 14 -10 q8 -10 18 -2 q12 0 10 12 q6 8 -6 18 q-6 5 -12 0 q-6 5 -12 0 q-8 5 -14 -1 z" fill="#f6ecd6"/>
     <circle cx="67" cy="54" r="7.5" fill="#fff" stroke="none"/>
     <circle cx="65" cy="55" r="5.2" fill="#111" stroke="none"/>
     <circle cx="63" cy="52" r="1.8" fill="#fff" stroke="none"/>
