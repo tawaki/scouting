@@ -1,0 +1,261 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>新竹孔廟 參觀小百科</title>
+<link rel="icon" href="logo.png">
+<meta name="description" content="新竹市孔廟（新竹公園內）參觀介紹：泮池、禮門義路、大成門、大成殿、東西廡、崇聖祠、鄉賢祠、歷史與祭孔大典。">
+<style>
+:root{
+  --bg:#f6f2ea; --card:#ffffff; --ink:#2b241f; --muted:#675d55; --line:#ddd3c4;
+  --accent:#a83a2c; --chip:#f1e8dc; --sec:#f8f3ec;
+  --a1:#a83a2c; --a2:#9a6b12; --a3:#2e6f8a; --a4:#5c7a2e;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --bg:#1a1614; --card:#25201d; --ink:#ede6de; --muted:#b4a99e; --line:#3d3530;
+    --accent:#f08a76; --chip:#2e2824; --sec:#2c2622;
+    --a1:#f08a76; --a2:#e5bd5a; --a3:#7cc0dd; --a4:#a8cc6e;
+  }
+}
+:root[data-theme="dark"]{
+  --bg:#1a1614; --card:#25201d; --ink:#ede6de; --muted:#b4a99e; --line:#3d3530;
+  --accent:#f08a76; --chip:#2e2824; --sec:#2c2622;
+  --a1:#f08a76; --a2:#e5bd5a; --a3:#7cc0dd; --a4:#a8cc6e;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--ink);
+  font-family:-apple-system,BlinkMacSystemFont,"PingFang TC","Noto Sans TC","Microsoft JhengHei",sans-serif;
+  line-height:1.7;font-size:17px}
+.wrap{max-width:820px;margin:0 auto;padding:0 16px}
+header{padding:22px 0 8px}
+.top{display:flex;align-items:center;justify-content:space-between;gap:12px}
+.brand{display:flex;align-items:center;gap:14px;min-width:0}
+.logo{height:76px;width:auto;flex:none}
+.kicker{display:block;font-size:.8rem;letter-spacing:.04em;color:var(--muted);text-decoration:none;margin-bottom:2px}
+.kicker:hover{text-decoration:underline}
+h1{font-size:1.6rem;margin:0;line-height:1.3}
+.sub{color:var(--muted);margin:6px 0 0;font-size:.95rem}
+#theme{align-self:flex-start;border:1px solid var(--line);background:var(--card);color:var(--ink);border-radius:999px;
+  padding:6px 12px;font-size:.9rem;cursor:pointer;flex:none}
+.info{display:flex;flex-wrap:wrap;gap:6px 16px;margin:10px 0 0;font-size:.88rem;color:var(--muted)}
+nav{position:sticky;top:0;z-index:5;background:var(--bg);padding:10px 0;border-bottom:1px solid var(--line)}
+.chips{display:flex;flex-wrap:wrap;gap:8px}
+.chips a{display:inline-block;padding:5px 12px;border-radius:999px;background:var(--chip);color:var(--ink);
+  text-decoration:none;font-size:.92rem;border:1px solid var(--line)}
+.tools{display:flex;gap:8px;margin-top:8px}
+.tools button{border:1px solid var(--line);background:var(--card);color:var(--ink);border-radius:8px;
+  padding:4px 10px;font-size:.85rem;cursor:pointer}
+section.area{margin:26px 0 8px;scroll-margin-top:110px}
+.area h2{font-size:1.3rem;margin:0 0 4px;padding-left:10px;border-left:6px solid var(--c)}
+.area .note{color:var(--muted);font-size:.9rem;margin:0 0 10px 16px}
+details.item{scroll-margin-top:120px;background:var(--card);border:1px solid var(--line);border-left:5px solid var(--c);
+  border-radius:12px;margin:10px 0;overflow:hidden}
+details.item>summary{list-style:none;cursor:pointer;display:flex;align-items:center;gap:12px;padding:12px 14px}
+details.item>summary::-webkit-details-marker{display:none}
+.emo{flex:none;width:3.2rem;height:3.2rem;display:block;object-fit:contain}
+.nm{flex:1;min-width:0}
+.nm b{font-size:1.15rem}
+.nm .tag{display:block;color:var(--muted);font-size:.88rem}
+.arrow{flex:none;color:var(--muted);transition:transform .2s}
+details[open] .arrow{transform:rotate(90deg)}
+.body{padding:0 14px 14px}
+.photos{display:grid;gap:10px;margin:0 0 10px}
+.photos.two{grid-template-columns:1fr 1fr}
+figure{margin:0}
+figure img{width:100%;height:auto;display:block;border-radius:10px;background:var(--chip)}
+.photos.two img{aspect-ratio:4/3;object-fit:cover}
+figcaption{font-size:.78rem;color:var(--muted);line-height:1.45;margin-top:4px}
+figcaption a{color:var(--muted)}
+.q{background:var(--sec);border-radius:10px;padding:10px 12px;margin:8px 0}
+.q h3{margin:0 0 2px;font-size:1rem;color:var(--c)}
+.q p{margin:0}
+.q ul{margin:4px 0 0;padding-left:1.2em}
+.check{display:none}
+.mark{font-size:.8rem;color:var(--muted);border:1px dashed var(--line);border-radius:6px;padding:0 6px;white-space:nowrap}
+.tasks{list-style:none;padding:0;margin:0}
+.tasks li{display:flex;gap:10px;align-items:flex-start;background:var(--card);border:1px solid var(--line);
+  border-radius:10px;padding:10px 12px;margin:8px 0}
+.tasks input{width:1.3rem;height:1.3rem;flex:none;margin-top:3px;accent-color:var(--accent)}
+.tasks label{cursor:pointer}
+.tasks li.done label{color:var(--muted);text-decoration:line-through}
+.rules{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:12px 16px 12px 34px;margin:10px 0}
+.rules li{margin:4px 0}
+footer{color:var(--muted);font-size:.85rem;padding:28px 0 40px;border-top:1px solid var(--line);margin-top:30px}
+footer a{color:var(--accent)}
+@media (max-width:480px){ body{font-size:16px} h1{font-size:1.35rem} .logo{height:60px} .brand{gap:10px} .emo{width:2.8rem;height:2.8rem} .photos.two{grid-template-columns:1fr} }
+</style>
+</head>
+<body>
+<header class="wrap">
+  <div class="top">
+    <div class="brand"><a href="../" title="回童軍教學資源首頁"><img class="logo" src="logo.png" alt="童軍教學資源首頁" width="228" height="300"></a><div><a class="kicker" href="../">Scouting 童軍教學資源</a><h1>新竹孔廟 參觀小百科</h1></div></div>
+    <button id="theme" type="button" aria-label="切換深色或淺色">🌓 深淺色</button>
+  </div>
+  <p class="sub">照著參觀路線，從最前面的泮池一路走到大成殿。點建築的名字，看看它的介紹。</p>
+  <div class="info"><span>📍 新竹市東區公園路 289 號（新竹公園內）</span><span>🕗 週二至週日 8:00–17:00（除夕休館）</span></div>
+</header>
+<nav class="wrap" aria-label="分類">
+  <div class="chips" id="chips"></div>
+  <div class="tools">
+    <button type="button" id="openAll">全部展開</button>
+    <button type="button" id="closeAll">全部收合</button>
+  </div>
+</nav>
+<main class="wrap" id="main"></main>
+<section class="wrap area" id="tasks" style="--c:var(--a4)">
+  <h2>找找看任務</h2>
+  <p class="note">到了現場，一項一項找出來，找到就打勾。打勾的紀錄只會存在這支手機或電腦上。</p>
+  <ul class="tasks" id="taskList"></ul>
+  <h2 style="margin-top:22px">參觀禮儀</h2>
+  <ol class="rules">
+    <li>孔廟是祭祀孔子的地方，說話輕聲，不追逐奔跑。</li>
+    <li>不攀爬泮池的石欄杆，也不要把手伸進池子裡。</li>
+    <li>進出門口時跨過門檻，不踩在門檻上。</li>
+    <li>神位、供桌和祭器只用眼睛看，不用手摸。</li>
+    <li>拍照前先看看有沒有人在參拜，不要擋到別人。</li>
+    <li>自己的垃圾自己帶走，讓孔廟保持乾淨。</li>
+  </ol>
+</section>
+<footer class="wrap">
+  <p>介紹內容參考<a href="https://taiwangods.moi.gov.tw/html/cultural/3_0011.aspx?i=169" target="_blank" rel="noopener">內政部「臺灣宗教文化地圖」新竹市孔廟</a>、<a href="https://dep-civil.hccg.gov.tw/ch/home.jsp?id=97&amp;parentpath=0,6,94" target="_blank" rel="noopener">新竹市政府民政處釋奠典禮介紹</a>、<a href="https://dep-e-district.hccg.gov.tw/ch/home.jsp?id=88&amp;parentpath=0%2C7" target="_blank" rel="noopener">新竹市東區區公所文化古蹟</a>與<a href="https://zh.wikipedia.org/zh-tw/%E6%96%B0%E7%AB%B9%E5%B8%82%E5%AD%94%E5%BB%9F" target="_blank" rel="noopener">維基百科「新竹市孔廟」</a>。各資料記載的年份偶有不同；標示「到現場確認」的地方，請以現場為準。</p>
+  <p>照片取自<a href="https://commons.wikimedia.org/wiki/Category:Hsinchu_Confucian_Temple" target="_blank" rel="noopener">維基共享資源</a>，每張照片下方註明作者與授權（創用 CC 授權或公有領域），本頁未修改照片內容，只縮小尺寸。開放時間可能調整，出發前可以先向新竹市政府確認。</p>
+</footer>
+<script src="photos.js"></script>
+<script>
+const Q = [["🏛️","認識建築"],["📍","位置"],["🔧","用途"],["📜","典故與歷史"],["🔍","現場觀察"]];
+const LIC = {"Public domain":"公有領域","CC BY-SA 4.0":"創用 CC 姓名標示－相同方式分享 4.0","CC BY 3.0":"創用 CC 姓名標示 3.0"};
+const AREAS = [
+ {id:"route", name:"參觀路線", c:"--a1", note:"新竹孔廟由南往北依序是：泮池 → 禮門、義路 → 大成門 → 大成殿，大成殿兩旁是東西廡。", items:[
+  {id:"panchi", n:"泮池", t:"孔廟最前面的半月形水池", photos:[["panchi-gate","泮池和後面的大成門"]], q:[
+   "孔廟最前面那個半圓形的水池，名字叫「泮池」。",
+   "走進孔廟第一個看到的就是泮池。它在大成門正前方，四周圍著石欄杆。",
+   "古時候的學宮前面都有泮池。讀書人考上秀才、進入官學讀書，就叫做「入泮」。水池也可以在失火時取水、讓夏天涼快一點，還有風水上的意義。",
+   "古代天子辦的學校四周是一整圈的水，地方上的學校只能有半圈，所以泮池是半圓形的，「泮」就有「半」的意思。",
+   "泮池是半圓形還是圓形？直直的那一邊朝向哪一棟建築？"]},
+  {id:"limen", art:"limen-yilu", n:"禮門、義路", t:"從旁邊進出，表示尊敬", photos:[], mark:true, q:[
+   "孔廟兩側的兩扇小門，一個叫「禮門」，一個叫「義路」。",
+   "資料記載在孔廟的東西兩側。這裡還沒有找到可以使用的照片，到現場找找看在哪裡。",
+   "孔廟正面最中間的大門平常不開，大家從兩旁的門進出，表示對孔子的尊敬。",
+   "名字出自《孟子》：「夫義，路也；禮，門也。」意思是做人要走在「義」的路上，從「禮」的門進出。",
+   "門上有沒有寫字？哪一邊是禮門，哪一邊是義路？"]},
+  {id:"dachengmen", n:"大成門", t:"中間的門只在祭孔時打開", photos:[["dachengmen","大成門正面"],["dachengmen-plaque","大成門的匾額"],["door-nails","門板上一顆一顆的門釘"]], q:[
+   "大成門也叫「儀門」，是走到大成殿之前要經過的門，正面有五個開間。",
+   "在泮池後面。1950 年代孔廟搬到新竹公園時，只有大成門和後面的大成殿保留了原來的樣子。",
+   "正中間的門只有在祭孔典禮時才打開，平常從兩旁的小門進出。",
+   "兩旁的小門叫「金聲門」和「玉振門」，出自《孟子》稱讚孔子「集大成」：演奏音樂時先敲鐘開始（金聲），最後敲玉磬結束（玉振），代表從頭到尾都完整。「大成」兩個字也是從這裡來的。",
+   "門板上凸起的圓點叫「門釘」，資料記載有 108 顆，數數看是不是？中間的石柱上纏著什麼動物？"]},
+  {id:"dachengdian", n:"大成殿", t:"孔廟最重要的主殿", photos:[["dachengdian","大成殿正面"],["confucius-tablet","正中央的孔子神位"],["sipei","兩旁的四配十二哲神位"]], q:[
+   "大成殿是孔廟最重要的主殿。",
+   "在大成門後面、整座孔廟最裡面，建在高高的台基上。",
+   "殿內正中央供奉孔子的神位，兩旁是「四配十二哲」，也就是孔子最重要的學生，和後來的大學者（像孟子、朱熹）。孔廟裡放的是寫著名字的木牌，叫「神位」，不是神像。",
+   "屋頂有上下兩層屋簷，叫做「重簷歇山頂」，是很尊貴的屋頂樣式。殿裡有一些石材和橫樑，是從清朝嘉慶年間的舊孔廟拆下來再用的，已經兩百多歲了。屋樑的縫隙很多，常有麻雀飛進來住，被人笑稱是「天然鳥園」。",
+   "屋頂最高的屋脊中間有一座小塔，兩邊各有一條龍，叫「雙龍護塔」。柱子上有沒有刻對聯？抬頭看看屋樑上有沒有麻雀。"]},
+  {id:"dongxiwu", n:"東西廡", t:"大成殿兩旁的長房子", photos:[["dongwu","東廡裡一排排的神位"]], q:[
+   "大成殿兩旁的長房子，東邊的叫「東廡」，西邊的叫「西廡」。",
+   "大成殿的左右兩側。",
+   "裡面一排一排供奉著歷代「先賢」和「先儒」的神位，他們是歷史上對儒家學問有貢獻的人。",
+   "屋頂是前後兩面斜坡的「硬山頂」，比大成殿的屋頂簡單，表示地位比主殿低一些。",
+   "數數看一排有幾個神位？東廡和西廡的神位一樣多嗎？"]}
+ ]},
+ {id:"shrine", name:"祠堂", c:"--a2", note:"除了孔子，孔廟也祭拜孔子的祖先和新竹本地的先賢。", items:[
+  {id:"chongshengci", n:"崇聖祠", t:"祭拜孔子的祖先", photos:[["chongshengci","崇聖祠的神位"]], mark:true, q:[
+   "崇聖祠供奉孔子的祖先。",
+   "在孔廟裡面，到現場找找看在哪一個位置。",
+   "孔子很了不起，人們也感謝養育出孔子的家族，所以另外設祠堂，祭拜孔子上面五代的祖先。",
+   "原本叫「啟聖祠」，清朝雍正元年（1723 年）改名為「崇聖祠」。",
+   "神位前面擺了哪些東西？（提示：燭台和香爐）"]},
+  {id:"xiangxianci", n:"鄉賢祠", t:"紀念新竹本地的先賢", photos:[["xiangxianci","鄉賢祠"]], q:[
+   "鄉賢祠供奉對新竹有貢獻的本地人物。",
+   "在孔廟裡面，到現場找找看在哪一個位置。",
+   "紀念為地方付出的人，讓後代記得他們、向他們學習。",
+   "2009 年重新設立，供奉王世傑、鄭崇和、鄭用錫、鄭用鑑、林占梅、徐立鵬，2012 年又加入新竹中學的老校長辛志平。王世傑是清朝時帶人來開墾竹塹的先民；鄭用錫是台灣本地出身、第一位考上進士的人，被稱為「開台進士」，當年興建孔廟時他也是負責的董事之一。",
+   "找找看辛志平校長的神位在哪裡？"]}
+ ]},
+ {id:"story", name:"孔廟的故事", c:"--a3", items:[
+  {id:"history", art:"scroll", n:"兩百年的搬家故事", t:"從清朝學宮到新竹公園", photos:[["xuegong-map","清朝《淡水廳志》裡的學宮圖"],["1895","1895 年被日本軍隊當作補給站的孔廟"],["stele","記錄孔廟搬遷的碑記"]], timeline:[
+   ["1810 年","竹塹的讀書人請求在這裡設立學宮。"],
+   ["1817 年","淡水同知張學溥帶頭捐款，開始興建。"],
+   ["1824 年","清朝道光四年完工，是北台灣重要的孔廟。"],
+   ["1895 年","日本軍隊來到新竹，孔廟被拿來當軍營和補給站。"],
+   ["1906 年","改作新竹公學校的校舍。"],
+   ["1909 年","鄉賢祠、明倫堂等建築被拆除。"],
+   ["1958 年","孔廟搬到新竹公園（當時叫中山公園）重建，保留大成門和大成殿原來的樣子。（各資料寫 1957 到 1959 年不等）"],
+   ["2010 年","公告為新竹市歷史建築。"],
+   ["2013 年","完成修繕，隔年恢復祭孔典禮。"]]},
+  {id:"ceremony", art:"yiwu", n:"祭孔大典", t:"每年 9 月 28 日，教師節", photos:[], q2:[
+   ["📅","什麼時候","每年國曆 9 月 28 日，孔子的生日，也就是教師節，新竹孔廟會舉行「釋奠典禮」來祭拜孔子。"],
+   ["🔔","怎麼進行","典禮大約一個小時，最重要的是「三獻禮」：初獻、亞獻、終獻，分三次向孔子獻上祭品和酒。"],
+   ["🪶","佾舞","祭孔時的舞蹈叫「佾舞」。跳舞的佾生左手拿「籥」（像笛子的樂器），右手拿「翟」（雉雞的羽毛），排成整齊的行列，動作緩慢莊重。"],
+   ["🥬","新竹的特色","新竹的祭孔從 2000 年起，把祭品的肉改成素食。"]]}
+ ]},
+ {id:"more", name:"園區裡的其他發現", c:"--a4", items:[
+  {id:"lion", photoThumb:"lion-door", n:"門上的獅頭", t:"偏殿門扇上的裝飾", photos:[["lion-door","偏殿門扇上的獅頭"]], q2:[
+   ["🔍","仔細看看","偏殿的門扇上有白色的獅頭裝飾。找找看是哪一扇門，獅子的嘴巴是張開還是閉著？"]]},
+  {id:"statue", photoThumb:"statue", n:"孔子像", t:"孔廟廣場上的孔子", photos:[["statue","孔廟廣場上的孔子像"],["plaza","從孔廟廣場看孔廟"]], q2:[
+   ["🔍","仔細看看","孔廟前面的廣場上有一座孔子像。看看孔子的雙手放在哪裡？他的臉朝向哪一個方向？"]]}
+ ]}
+];
+const TASKS = [
+ "泮池是什麼形狀？","找到「禮門」和「義路」","數一數大成門的門釘","找到寫著「大成門」的匾額",
+ "看到大成殿屋脊上的「雙龍護塔」","找到孔子的神位","數數看東廡一排有幾個神位","找到崇聖祠",
+ "在鄉賢祠找到辛志平校長","找到門上的白色獅頭","找到記錄孔廟搬遷的碑記","和孔廟廣場的孔子像打招呼"];
+const esc = s => s.replace(/[&<>"]/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+function fig([k, cap]) {
+  const p = PHOTOS[k], lic = LIC[p.lic] || p.lic;
+  const licTxt = p.licurl ? `<a href="${p.licurl}" target="_blank" rel="noopener">${lic}</a>` : lic;
+  return `<figure><img src="photo/${k}.jpg" alt="${esc(cap)}" width="${p.w}" height="${p.h}" loading="lazy">
+    <figcaption>${esc(cap)}｜照片：<a href="${p.page}" target="_blank" rel="noopener">${esc(p.by)}</a>，${licTxt}，來源：維基共享資源</figcaption></figure>`;
+}
+const main = document.getElementById("main"), chips = document.getElementById("chips");
+for (const a of AREAS) {
+  chips.insertAdjacentHTML("beforeend", `<a href="#${a.id}" style="border-color:var(${a.c})">${a.name}</a>`);
+  const cards = a.items.map(x => {
+    const thumb = x.photoThumb
+      ? `<img class="emo" src="photo/${x.photoThumb}.jpg" alt="" width="64" height="64" loading="lazy" style="object-fit:cover;border-radius:10px">`
+      : `<img class="emo" src="art/${x.art || x.id}.svg" alt="" width="64" height="64" loading="lazy">`;
+    const ph = x.photos.length ? `<div class="photos${x.photos.length > 1 ? " two" : ""}">${x.photos.map(fig).join("")}</div>` : "";
+    let body = "";
+    if (x.q) body = x.q.map((p, i) => `<div class="q"><h3>${Q[i][0]} ${Q[i][1]}</h3><p>${esc(p)}</p></div>`).join("");
+    if (x.q2) body = x.q2.map(([e, h, p]) => `<div class="q"><h3>${e} ${h}</h3><p>${esc(p)}</p></div>`).join("");
+    if (x.timeline) body = `<div class="q"><h3>📜 大事記</h3><ul>${x.timeline.map(([y, t]) => `<li><b>${y}</b>　${esc(t)}</li>`).join("")}</ul></div>`;
+    const mark = x.mark ? ` <span class="mark">到現場確認</span>` : "";
+    return `
+    <details class="item" id="${x.id}">
+      <summary>${thumb}
+        <span class="nm"><b>${esc(x.n)}</b>${mark}<span class="tag">${esc(x.t)}</span></span>
+        <span class="arrow" aria-hidden="true">▶</span></summary>
+      <div class="body">${ph}${body}</div>
+    </details>`;
+  }).join("");
+  main.insertAdjacentHTML("beforeend",
+    `<section class="area" id="${a.id}" style="--c:var(${a.c})"><h2>${a.name}</h2>${a.note ? `<p class="note">${a.note}</p>` : ""}${cards}</section>`);
+}
+chips.insertAdjacentHTML("beforeend", `<a href="#tasks" style="border-color:var(--a4)">找找看任務</a>`);
+let done = {};
+try { done = JSON.parse(localStorage.getItem("kongmiao-tasks") || "{}"); } catch (e) {}
+const tl = document.getElementById("taskList");
+TASKS.forEach((t, i) => {
+  tl.insertAdjacentHTML("beforeend", `<li class="${done[i] ? "done" : ""}"><input type="checkbox" id="t${i}" ${done[i] ? "checked" : ""}><label for="t${i}">${esc(t)}</label></li>`);
+});
+tl.addEventListener("change", e => {
+  const i = +e.target.id.slice(1); done[i] = e.target.checked;
+  e.target.parentElement.classList.toggle("done", e.target.checked);
+  try { localStorage.setItem("kongmiao-tasks", JSON.stringify(done)); } catch (err) {}
+});
+const all = () => document.querySelectorAll("details.item");
+document.getElementById("openAll").onclick = () => all().forEach(d => d.open = true);
+document.getElementById("closeAll").onclick = () => all().forEach(d => d.open = false);
+if (location.hash) { const d = document.querySelector(location.hash); if (d && d.tagName === "DETAILS") d.open = true; }
+const root = document.documentElement;
+try { const t = localStorage.getItem("kongmiao-theme"); if (t) root.dataset.theme = t; } catch (e) {}
+document.getElementById("theme").onclick = () => {
+  const dark = root.dataset.theme ? root.dataset.theme === "dark" : matchMedia("(prefers-color-scheme: dark)").matches;
+  root.dataset.theme = dark ? "light" : "dark";
+  try { localStorage.setItem("kongmiao-theme", root.dataset.theme); } catch (e) {}
+};
+</script>
+</body>
+</html>

@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 220 200">
+  <g stroke="#222" stroke-width="3" stroke-linejoin="round" stroke-linecap="round">
+    <path d="M6 188 H214" stroke-width="3"/>
+    <rect x="12" y="158" width="196" height="30" fill="#8a4b2a"/>
+    <path d="M12 168 H208" stroke-width="2"/>
+    <path d="M26 150 V88 q14 -14 28 0 V150 z" fill="#c8402f"/>
+    <rect x="32" y="96" width="16" height="40" fill="#f2c94c"/>
+    <rect x="22" y="150" width="36" height="8" fill="#8a4b2a"/>
+    <path d="M62 150 V78 q14 -14 28 0 V150 z" fill="#c8402f"/>
+    <rect x="68" y="86" width="16" height="50" fill="#f2c94c"/>
+    <rect x="58" y="150" width="36" height="8" fill="#8a4b2a"/>
+    <path d="M98 150 V68 q14 -14 28 0 V150 z" fill="#c8402f"/>
+    <rect x="104" y="76" width="16" height="60" fill="#f2c94c"/>
+    <rect x="94" y="150" width="36" height="8" fill="#8a4b2a"/>
+    <path d="M134 150 V78 q14 -14 28 0 V150 z" fill="#c8402f"/>
+    <rect x="140" y="86" width="16" height="50" fill="#f2c94c"/>
+    <rect x="130" y="150" width="36" height="8" fill="#8a4b2a"/>
+    <path d="M170 150 V88 q14 -14 28 0 V150 z" fill="#c8402f"/>
+    <rect x="176" y="96" width="16" height="40" fill="#f2c94c"/>
+    <rect x="166" y="150" width="36" height="8" fill="#8a4b2a"/>
+  </g>
+</svg>
